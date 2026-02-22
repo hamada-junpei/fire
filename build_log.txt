@@ -1,0 +1,22 @@
+
+> fire@0.0.0 build
+> tsc -b && vite build
+
+src/components/Dashboard.tsx(19,1): error TS6133: 'QuestBoard' is declared but its value is never read.
+src/components/Dashboard.tsx(121,12): error TS6133: 'mcData' is declared but its value is never read.
+src/components/Dashboard.tsx(164,11): error TS6133: 'handlers' is declared but its value is never read.
+src/components/Dashboard.tsx(167,9): error TS2353: Object literal may only specify known properties, and 'trackMouse' does not exist in type 'SwipeHandlers'.
+src/components/Dashboard.tsx(192,11): error TS6133: 'handleSaveJob' is declared but its value is never read.
+src/components/Dashboard.tsx(199,11): error TS6133: 'handleRemoveJob' is declared but its value is never read.
+src/components/Dashboard.tsx(205,26): error TS6133: 'setIsMonteCarlo' is declared but its value is never read.
+src/components/Dashboard.tsx(206,12): error TS6133: 'sideFireShortcut' is declared but its value is never read.
+src/components/Dashboard.tsx(331,22): error TS6133: 'setShowPast' is declared but its value is never read.
+src/components/Dashboard.tsx(332,11): error TS6133: 'pastData' is declared but its value is never read.
+src/components/Dashboard.tsx(399,11): error TS6133: 'handleSideFireDiagnosis' is declared but its value is never read.
+src/components/Dashboard.tsx(608,24): error TS2304: Cannot find name 'swipeRef'.
+src/components/Dashboard.tsx(641,41): error TS2322: Type '{ inputs: FireInputs; fireNumber: number; data: SimulationData[]; yearsToFire: number | null; income: number; expenses: number; investmentReturn: number; playerAchievements: { ...; }; playerStats: PlayerStats; unlockedItems: GameItem[]; }' is not assignable to type 'IntrinsicAttributes & StrategySectionProps'.
+  Property 'yearsToFire' does not exist on type 'IntrinsicAttributes & StrategySectionProps'.
+src/components/Dashboard.tsx(642,41): error TS17001: JSX elements cannot have multiple attributes with the same name.
+src/components/dashboard/QuestBoard.tsx(3,1): error TS6192: All imports in import declaration are unused.
+src/components/dashboard/QuestBoard.tsx(38,30): error TS2304: Cannot find name 'BarChart3'.
+src/components/dashboard/QuestBoard.tsx(58,18): error TS2304: Cannot find name 'AnalyticsDashboard'.

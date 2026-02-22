@@ -1,0 +1,6 @@
+src/components/dashboard/QuestBoard.tsx(2,10): error TS6133: 'Zap' is declared but its value is never read.
+src/components/dashboard/QuestBoard.tsx(2,15): error TS6133: 'Target' is declared but its value is never read.
+src/components/dashboard/QuestBoard.tsx(2,23): error TS6133: 'Trophy' is declared but its value is never read.
+src/components/dashboard/QuestBoard.tsx(2,31): error TS6133: 'Lock' is declared but its value is never read.
+src/components/dashboard/QuestBoard.tsx(2,37): error TS6133: 'Unlock' is declared but its value is never read.
+src/components/dashboard/QuestBoard.tsx(2,45): error TS6133: 'Star' is declared but its value is never read.

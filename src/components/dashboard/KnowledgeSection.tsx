@@ -5,6 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/Tabs';
 import type { FireCourse } from '../../types';
 import { LatteFactor } from '../LatteFactor';
 import { InflationMonster } from '../InflationMonster';
+import { BooksTab } from './BooksTab';
 
 interface KnowledgeSectionProps {
     fireCourse: FireCourse | null;
@@ -17,9 +18,10 @@ export const KnowledgeSection: React.FC<KnowledgeSectionProps> = (props) => {
     return (
         <div className="space-y-6 animate-slide-in-bottom">
             <Tabs defaultValue="learning" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-6">
-                    <TabsTrigger value="learning">📝 基礎知識・学ぶ</TabsTrigger>
-                    <TabsTrigger value="cases">👥 FIRE実践事例</TabsTrigger>
+                <TabsList className="grid w-full grid-cols-3 mb-6">
+                    <TabsTrigger value="learning">📝 基礎・学ぶ</TabsTrigger>
+                    <TabsTrigger value="cases">👥 FIRE事例</TabsTrigger>
+                    <TabsTrigger value="books">📚 おすすめ書籍</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="learning" className="space-y-8">
@@ -47,6 +49,10 @@ export const KnowledgeSection: React.FC<KnowledgeSectionProps> = (props) => {
 
                 <TabsContent value="cases">
                     <CasesTab fireCourse={props.fireCourse} />
+                </TabsContent>
+
+                <TabsContent value="books">
+                    <BooksTab />
                 </TabsContent>
             </Tabs>
         </div>

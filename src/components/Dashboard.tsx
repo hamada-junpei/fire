@@ -12,16 +12,15 @@ import { useSwipeable } from '../hooks/useSwipeable';
 
 // Sub Components - Lazy loaded for better performance
 import { InputSection } from './dashboard/InputSection';
-import { ConciergeBanner } from './dashboard/ConciergeBanner';
-
 // Lazy load heavy components
 import { StrategySection } from './dashboard/StrategySection';
-
 import { KnowledgeSection } from './dashboard/KnowledgeSection';
 import { calculatePlayerStats, GAME_ITEMS } from '../utils/gameSystem';
 import { checkAchievements, type Achievement } from '../utils/achievementSystem';
 import { AchievementNotification } from './AchievementNotification';
 import { LevelUpNotification, EquipmentUnlockNotification } from './LevelUpNotification';
+import { Coffee } from 'lucide-react';
+import { MONETIZATION } from '../config/monetization';
 
 // Lazy load heavy components
 const OnboardingWizard = React.lazy(() => import('./OnboardingWizard').then(m => ({ default: m.OnboardingWizard })));
@@ -521,6 +520,16 @@ export const Dashboard: React.FC = () => {
 
                         {/* Actions */}
                         <div className="flex items-center gap-2">
+                            <a
+                                href={MONETIZATION.buyMeACoffeeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-black rounded-lg text-sm font-bold transition-all duration-normal shadow-sm hover:shadow-md border border-[#FFDD00]/20"
+                                title="開発者を応援する"
+                            >
+                                <Coffee className="w-4 h-4" />
+                                <span>応援する</span>
+                            </a>
                             <button
                                 onClick={() => setShowScenarioModal(true)}
                                 className="p-2 text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-all duration-fast"
@@ -561,7 +570,18 @@ export const Dashboard: React.FC = () => {
                     </div>
 
                     {/* Mobile Navigation */}
-                    <div className="md:hidden pb-3 border-t border-neutral-100 dark:border-neutral-800 pt-2">
+                    <div className="md:hidden pb-3 border-t border-neutral-100 dark:border-neutral-800 pt-2 space-y-2">
+                        <div className="flex items-center justify-between px-2 pb-2">
+                            <a
+                                href={MONETIZATION.buyMeACoffeeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-3 py-1.5 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-black rounded-lg text-xs font-bold transition-all duration-normal shadow-sm w-full justify-center"
+                            >
+                                <Coffee className="w-3.5 h-3.5" />
+                                <span>開発者を応援する ☕️</span>
+                            </a>
+                        </div>
                         <div className="flex gap-2">
                             {[
                                 { id: 'strategy', label: 'マイ戦略', icon: '📊' },

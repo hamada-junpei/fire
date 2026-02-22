@@ -1,0 +1,6 @@
+
+> fire@0.0.0 build
+> tsc -b && vite build
+
+src/components/Dashboard.tsx(610,18): error TS2304: Cannot find name 'ConciergeBanner'.
+src/components/dashboard/BooksTab.tsx(2,34): error TS6133: 'Star' is declared but its value is never read.
